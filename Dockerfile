@@ -21,7 +21,7 @@ RUN echo deb http://ftp.us.debian.org/debian jessie main >> /etc/apt/sources.lis
     java -jar /pljava/pljava-packaging/target/pljava-pg9.4-amd64-Linux-gpp.jar && \
     cd ../ && \
     apt-get -y remove --purge --auto-remove git ca-certificates g++ maven postgresql-server-dev-9.4 libpq-dev libecpg-dev libkrb5-dev oracle-java8-installer libssl-dev && \
-    apt-get clean && apt-get update && apt-get --fix-missing -y --force-yes --no-install-recommends install -f openjdk-8-jdk-headless && \
+    apt-get clean && apt-get update && apt-get install -f && apt-get autoremove && apt-get --fix-missing -y --force-yes --no-install-recommends install openjdk-8-jdk-headless && \
     apt-get -y clean autoclean autoremove && \
     rm -rf ~/.m2 /var/lib/apt/lists/* /tmp/* /var/tmp/*
 

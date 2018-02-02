@@ -13,7 +13,7 @@ RUN echo deb http://ftp.us.debian.org/debian jessie main >> /etc/apt/sources.lis
     apt-get clean && apt-get update && apt-get --fix-missing -y --force-yes --no-install-recommends install g++ maven && \
     apt-get clean && apt-get update && apt-get --fix-missing -y --force-yes --no-install-recommends install postgresql-server-dev-9.4 libpq-dev && \
     apt-get clean && apt-get update && apt-get --fix-missing -y --force-yes --no-install-recommends install libecpg-dev libkrb5-dev && \
-    apt-get clean && apt-get update && apt-get --fix-missing -y --force-yes --no-install-recommends install oracle-java8-installer libssl-dev && \
+    apt-get clean && apt-get update && apt-get --fix-missing -y --force-yes --no-install-recommends install oracle-java8-installer libssl-dev openjdk-8-jdk-headless && \
     export PGXS=/usr/lib/postgresql/9.4/lib/pgxs/src/makefiles/pgxs.mk && \
     cd pljava && \
     git checkout tags/V1_5_0 && \

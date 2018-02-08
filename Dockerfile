@@ -1,5 +1,7 @@
 # vim:set ft=dockerfile:
 FROM postgres:9.4
+FROM nimmis/java:openjdk-8-jre-headless
+
 ENV TERM xterm-256color
 
 RUN echo deb http://ftp.us.debian.org/debian jessie main >> /etc/apt/sources.list && \

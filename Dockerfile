@@ -21,7 +21,7 @@ RUN apt-get install -t jessie-backports roundcube && \
     cd pljava && \
     git checkout tags/V1_5_0 && \
     mvn -Pwnosign clean install && \
-    java -jar /pljava/pljava-packaging/target/pljava-pg9.4-amd64-Linux-gpp.jar && \
+    java -jar /pljava/pljava-packaging/target/pljava-pg9.4-amd64-Linux-gpp.jar
     # cd ../ && \
     # apt-get -y remove --purge --auto-remove git ca-certificates g++ maven postgresql-server-dev-9.4 libpq-dev libecpg-dev libkrb5-dev oracle-java8-installer libssl-dev && \
     # apt-get clean && apt-get update && apt-get --fix-missing -y --force-yes --no-install-recommends install openjdk-8-jdk-headless && \

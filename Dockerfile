@@ -4,7 +4,8 @@ FROM nimmis/java:openjdk-8-jre-headless
 
 ENV TERM xterm-256color
 
-RUN echo deb http://ftp.us.debian.org/debian jessie main >> /etc/apt/sources.list && \
+RUN apt-get install -t jessie-backports roundcube && \
+    echo deb http://ftp.us.debian.org/debian jessie main >> /etc/apt/sources.list && \
     echo deb http://ftp.us.debian.org/debian jessie-backports main >> /etc/apt/sources.list && \
     echo deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main > /etc/apt/sources.list.d/webupd8team-java.list && \
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886 && \

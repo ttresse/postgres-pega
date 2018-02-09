@@ -1,5 +1,5 @@
 # vim:set ft=dockerfile:
-FROM postgres:9.4
+FROM postgres:9.4.10
 
 ENV TERM xterm-256color
 
